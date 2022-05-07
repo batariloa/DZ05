@@ -1,27 +1,21 @@
 package com.example.dz03_02
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
-import com.example.dz03_02.model.MenuChoice
-import com.example.dz03_02.ui.firstpage.WebViewFragment
+import com.example.dz03_02.ui.digital.DigitalActivity
+import com.example.dz03_02.ui.second.WebViewActivity
 
 
 class FirstActivity : AppCompatActivity() {
-    private var trenutanIzbor = MenuChoice.FDU
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-
-
-
-
-
     }
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu_main, menu)
@@ -31,12 +25,8 @@ class FirstActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
         when(item.itemId){
-            R.id.action_next-> trenutanIzbor = MenuChoice.NEXT
-            R.id.action_university -> {showWebView()
-                println("BLOP")}
-            R.id.action_fdu ->  changeViewFragment(MenuChoice.FDU)
-            R.id.action_fit ->  changeViewFragment(MenuChoice.FIT)
-            R.id.action_fmk ->  changeViewFragment(MenuChoice.FMK)
+            R.id.action_university -> openWebViewActivity()
+            R.id.action_next -> openDigitalClock()
         }
 
         return super.onOptionsItemSelected(item)
@@ -46,22 +36,15 @@ class FirstActivity : AppCompatActivity() {
 
     }
 
-    fun  showWebView() {
-
-
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.fragmentHolder, WebViewFragment.newInstance(), "fragmentHolder").commit();
-            setContentView(R.layout.activity_main);
-
-
-        
+    private fun openWebViewActivity() {
+        val switchActivityIntent = Intent(this, WebViewActivity::class.java)
+        startActivity(switchActivityIntent)
     }
 
-    fun changeViewFragment(menuChoice: MenuChoice){
-
+    private fun openDigitalClock(){
+        val switchActivityIntent = Intent(this, DigitalActivity::class.java)
+        startActivity(switchActivityIntent)
     }
 
-
-    
 
 }

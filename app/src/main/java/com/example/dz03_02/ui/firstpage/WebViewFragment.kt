@@ -13,11 +13,13 @@ import com.example.dz03_02.model.MenuChoice
 
 class WebViewFragment : Fragment() {
 
+    var webView: WebView? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         var param1: MenuChoice? = null
         super.onCreate(savedInstanceState)
         arguments?.let {
 
+            webView = view?.findViewById(R.id.web_view)
         }
 
 
@@ -30,6 +32,7 @@ class WebViewFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_web_view, container, false)
     }
+
 
     companion object {
         // TODO: Rename and change types and number of parameters
@@ -44,7 +47,7 @@ class WebViewFragment : Fragment() {
             }
     }
 
-    fun loadUrl(webView: WebView?, url:String){
+    fun loadUrl(url:String){
         webView?.loadUrl(url)
     }
 }
