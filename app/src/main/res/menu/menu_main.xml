@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.rashish.myapplication.MainActivity">
+    <item
+        android:id="@+id/action_university"
+        android:orderInCategory="100"
+        android:title="Univerzitet"
+
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_fmk"
+        android:orderInCategory="100"
+        android:title="FMK"
+
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_fit"
+        android:orderInCategory="100"
+        android:title="FIT"
+
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_fdu"
+        android:orderInCategory="100"
+        android:title="FDU"
+
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_next"
+        android:orderInCategory="100"
+        android:title="Sledece"
+
+        app:showAsAction="never" />
+
+</menu>
