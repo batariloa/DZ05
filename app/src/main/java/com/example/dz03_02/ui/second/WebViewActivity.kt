@@ -16,17 +16,15 @@ class WebViewActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_web_view)
 
-
-
         webView = findViewById(R.id.web_view)
+        webView?.settings?.javaScriptEnabled
 
     }
+
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu_map, menu)
         return true
     }
-
-
 
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

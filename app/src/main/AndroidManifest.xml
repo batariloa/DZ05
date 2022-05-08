@@ -17,11 +17,9 @@
         <activity
             android:name=".ui.second.WebViewActivity"
             android:exported="false" />
+
         <activity
-            android:name=".ui.web.WebViewActivity"
-            android:exported="false" />
-        <activity
-            android:name=".FirstActivity"
+            android:name=".ui.firstpage.FirstActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

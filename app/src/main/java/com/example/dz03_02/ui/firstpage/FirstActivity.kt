@@ -1,10 +1,11 @@
-package com.example.dz03_02
+package com.example.dz03_02.ui.firstpage
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import com.example.dz03_02.R
 import com.example.dz03_02.ui.digital.DigitalActivity
 import com.example.dz03_02.ui.second.WebViewActivity
 
@@ -32,9 +33,6 @@ class FirstActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
-    fun next(){
-
-    }
 
     private fun openWebViewActivity() {
         val switchActivityIntent = Intent(this, WebViewActivity::class.java)
